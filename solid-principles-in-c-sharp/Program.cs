@@ -22,10 +22,15 @@ UserService userService = new UserService(emailService, logger);
 userService.Register("user@example.com", "password123");
 
 
+Console.WriteLine("Open/Closed Principle");
 
-
-
-
+Rectangle r1 = new Rectangle { Height = 10, Width = 5 };
+Rectangle r2 = new Rectangle { Height = 4, Width = 6 };
+Circle c1 = new Circle { Radius = 7 };
+Circle c2 = new Circle { Radius = 3 };
+AreaCalculator areaCalculator = new AreaCalculator(logger);
+Shape[] arrShapes = { r1, r2, c1, c2 };
+double totalArea = areaCalculator.TotalArea(arrShapes);
 
 
 Console.ReadLine();
